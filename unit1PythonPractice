@@ -1,0 +1,93 @@
+
+import math
+
+print ("Hello console")
+# single line comments use hashtags
+"""
+3 quotation marks are used to create 
+multiple lines of code comments
+
+"""
+# print () function allows whatever is inside the parenthesis to be output
+
+my_name = "Mikayla Harrison"
+print ("My name is " + my_name)
+
+work_from_home = True
+print ("I work from home: " + str(work_from_home))
+
+side = 15
+radius = 10
+txt = "The radius of the circle is {}"
+print ((f"The length of each side of the square is {side}"))
+print (txt.format(radius))
+
+square_area = side*side
+square_perimeter = 2*(side*side)
+print (f"The square area is {square_area} and the perimeter is {square_perimeter}" )
+
+circle_area = 3.14*radius*radius
+circle_perimeter = 3.14*2*radius
+print (f"The circle area is {circle_area} and the perimeter is {circle_perimeter}")
+
+#list of strings clothes = ["pants", "shirt", "shoes"]
+#list of numbers (int and float) scores = [100, -0.5, 3.333]
+#list of booleans answers = [True, False, True]
+
+travel_options = ["foot", "bike", "car", "airplane"]
+print(f"1){travel_options[0]}")
+print(f"2){travel_options[1]}")
+print(f"3){travel_options[2]}")
+print(f"4){travel_options[3]}")
+
+travel_type = input("How would you like to travel in this area?")
+print(travel_type)
+
+distance = 100
+
+time = 0
+
+cost = 0
+
+#foot
+if travel_type == "foot":
+    print("Walking is free! Speed is 3pmh.")
+    cost = 0
+    time = distane/3
+#bike
+elif travel_type == "bike":
+    rent_bike = input("Do you need to rent a bike? (yes or no) ")
+
+    if rent_bike == "yes":
+        print("The price to rent is $45. Speed 10 mph.")
+        cost = 45
+    else:
+        print("Biking is free! Speed is 10pmh.")
+        cost = 0
+    time = distance/10
+#car
+elif travel_type == "car":
+    print("Driving is $0.25/mi. Speed is 60mph.")
+    cost = .25*distance
+    time = distance/60
+#airplane
+elif travel_type == "airplane":
+    passenger_count = int(input("How many passengers do you have?"))
+    print("Flying is $0.10/mi. Speed is 400mph.")
+    cost = .10*distance*passenger_count
+    time = distance/400
+else:
+    print(f"Sorry. {travel_type} is not a valid travel option.")
+
+
+print (f"Traveling {distance} miles by {travel_type} took {time} hours and ${cost} .")
+
+cost_bar = "Cost: "
+for cost in travel_type:
+    cost_bar += "$"
+print(cost_bar)
+
+travel_bar = "Travel Time: "
+for time in travel_type:
+    travel_bar += "/"
+print(travel_bar)
